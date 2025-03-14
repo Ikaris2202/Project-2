@@ -7,27 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    
     <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-in-out;
-        }
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s ease-in-out;
-        }
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s ease-in-out;
-        }
-        .fade-in.visible,
-        .slide-in-left.visible,
-        .slide-in-right.visible {
-            opacity: 1;
-            transform: translateX(0) translateY(0);
+        .feature-card:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -52,12 +36,12 @@
 
     <section class="container mt-5 pt-5">
         <div class="row align-items-center">
-            <div class="col-md-6 fade-in">
+            <div class="col-md-6">
                 <h1 class="fw-bold">Revolutionizing Lung Disease Detection</h1>
                 <p class="text-secondary">Advanced AI-powered technology for accurate and efficient lung disease diagnosis, supporting healthcare professionals worldwide.</p>
                 <a href="#" class="btn btn-primary btn-lg">Learn More</a>
             </div>
-            <div class="col-md-6 fade-in">
+            <div class="col-md-6">
                 <img src="./ASSETS/national-cancer-institute-NFvdKIhxYlU-unsplashAA.jpg" class="img-fluid rounded shadow-sm" alt="Medical AI">
             </div>
         </div>
@@ -65,21 +49,20 @@
 
     <section class="container my-5">
         <div class="row align-items-center">
-            <div class="col-md-6 slide-in-left">
+            <div class="col-md-6">
                 <img src="./ASSETS/national-cancer-institute-59pGROkKJPE-unsplash.jpg" class="img-fluid rounded shadow-sm" alt="X-ray">
             </div>
-            <div class="col-md-6 slide-in-right">
+            <div class="col-md-6">
                 <h2 class="fw-bold">About 🩺LungScan AI</h2>
                 <p class="text-secondary">🩺 LungScan AI is a cutting-edge, AI-powered diagnostic tool designed to revolutionize the early detection of lung diseases, including pneumonia, tuberculosis, and lung cancer. By leveraging deep learning and advanced image processing, LungScan AI analyzes chest X-rays and CT scans with high precision, assisting radiologists and healthcare professionals in making faster and more accurate diagnoses.</p>
             </div>
         </div>
     </section>
+
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center fw-bold">Key Features</h2>
             <div class="row mt-4">
-                
- 
                 <div class="col-md-4">
                     <div class="card p-4 border-0 shadow-sm text-center feature-card">
                         <div class="fs-1 text-primary">
@@ -90,7 +73,6 @@
                     </div>
                 </div>
 
-
                 <div class="col-md-4">
                     <div class="card p-4 border-0 shadow-sm text-center feature-card">
                         <div class="fs-1 text-primary">
@@ -100,7 +82,6 @@
                         <p class="text-secondary">Delivers results in seconds with high accuracy, assisting healthcare professionals.</p>
                     </div>
                 </div>
-
 
                 <div class="col-md-4">
                     <div class="card p-4 border-0 shadow-sm text-center feature-card">
@@ -115,64 +96,19 @@
         </div>
     </section>
 
-
-    <style>
-
-        .feature-card {
-            transition: all 0.3s ease-in-out;
-            transform: translateY(20px);
-            opacity: 0;
-        }
-
-        .feature-card:hover {
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-            transform: scale(1.05);
-        }
-
-        .fade-in {
-            transform: translateY(0);
-            opacity: 1;
-            transition: all 0.6s ease-in-out;
-        }
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const features = document.querySelectorAll(".feature-card");
-
-            function revealFeatures() {
-                features.forEach((card, index) => {
-                    const cardPosition = card.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.3;
-
-                    if (cardPosition < screenPosition) {
-                        setTimeout(() => {
-                            card.classList.add("fade-in");
-                        }, index * 150);
-                    }
-                });
-            }
-
-            window.addEventListener("scroll", revealFeatures);
-            revealFeatures();
-        });
-    </script>
-
-
     <section class="container my-5">
         <div class="row align-items-center">
-            <div class="col-md-6 slide-in-left">
+            <div class="col-md-6">
                 <h2 class="fw-bold">Advanced Technology</h2>
                 <p><i class="fas fa-shield-alt text-primary"></i> <strong>Secure Processing</strong> - HIPAA-compliant data handling.</p>
                 <p><i class="fas fa-chart-line text-primary"></i> <strong>Real-time Analytics</strong> - Instant analysis with visualization.</p>
                 <p><i class="fas fa-user-check text-primary"></i> <strong>Expert Validation</strong> - AI results validated by radiologists.</p>
             </div>
-            <div class="col-md-6 slide-in-right">
+            <div class="col-md-6">
                 <img src="./ASSETS/testalize-me-9xHsWmh3m_4-unsplash.jpg" class="img-fluid rounded shadow-sm" alt="Medical Technology">
             </div>
         </div>
     </section>
-
 
     <section class="py-5 text-center bg-primary text-white">
         <h2 class="fw-bold">Ready to Transform Your Practice?</h2>
@@ -180,8 +116,7 @@
         <a href="#" class="btn btn-light btn-lg">Get Started</a>
     </section>
 
-
-    <footer class="bg-dark text-white pt-5 pb-3 fade-in">
+    <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -216,26 +151,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
-
-            function revealElements() {
-                elements.forEach((el) => {
-                    const position = el.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-
-                    if (position < screenPosition) {
-                        el.classList.add("visible");
-                    }
-                });
-            }
-
-            window.addEventListener("scroll", revealElements);
-            revealElements();
-        });
-    </script>
 
 </body>
 </html>
